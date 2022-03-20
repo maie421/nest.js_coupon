@@ -12,8 +12,10 @@ export class CouponsService {
         private couponRepository: CouponRepository,
       ){}
 
-      @Cron('45 * * * * *')
-      handleCron() {
-        this.logger.debug('Called when the current second is 45');
+      @Cron('* * * * * *', {
+        name: 'notifications',
+      })
+      triggerNotifications() {
+        this.logger.debug('Called every 15 seconds');
       }
 }
