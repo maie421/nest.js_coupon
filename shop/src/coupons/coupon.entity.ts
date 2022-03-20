@@ -14,11 +14,8 @@ export class Coupon {
     @Column('text')
     discount_value: string
 
-    @Column("timestamp")
-    public assigne_at: Date;
-
-    @Column({ type: "timestamp", precision: 6, nullable: true })
-    public end_at: Date;
+    @Column({ type: "int" , nullable: true})
+    period_day: number
     
     @CreateDateColumn({ name: "created_at" })
     created_at: Date;

@@ -2,7 +2,7 @@ import { Controller, Get, UseGuards ,Request, Post, Body, HttpStatus, HttpExcept
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { CreateUserDto } from 'src/dto/users/create-user.dto';
 import { UsersService } from './users.service';
-import { lsUserException,emailException} from 'src/exception/users-exception'
+import { lsUserException,emailException} from './users-exception';
 import * as bcrypt from 'bcrypt';
 
 @Controller('users')
