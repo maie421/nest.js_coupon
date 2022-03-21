@@ -12,10 +12,10 @@ export class CouponsService {
         private couponRepository: CouponRepository,
       ){}
 
-      @Cron('* * * * * *', {
-        name: 'notifications',
-      })
-      triggerNotifications() {
-        this.logger.debug('Called every 15 seconds');
-      }
+    //   @Cron('* * * * * *', {
+    //     name: 'notifications',
+    //   })
+    //   triggerNotifications() {
+    //     this.logger.debug('Called every 15 seconds');
+    //   }
 }
