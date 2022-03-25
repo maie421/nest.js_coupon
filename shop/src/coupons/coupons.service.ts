@@ -1,21 +1,20 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { Cron } from '@nestjs/schedule';
-import { CronJob } from 'cron';
+import { CreateCouponDto } from 'src/dto/coupons/ceate-coupon.dto';
 import { CouponRepository } from './copons.repository';
+import { Coupon } from './coupon.entity';
 
 @Injectable()
 export class CouponsService {
 
-    private readonly logger = new Logger(CouponsService.name);
-    
     constructor(
         private couponRepository: CouponRepository,
-      ){}
+    ){}
 
-    //   @Cron('* * * * * *', {
-    //     name: 'notifications',
-    //   })
-    //   triggerNotifications() {
-    //     this.logger.debug('Called every 15 seconds');
-    //   }
+    async save(createCouponDto : CreateCouponDto): Promise<Coupon>{
+      return this.couponRepository.save(createCouponDto);
+    }
+
+    async findAll(): Promise<Coupon[]>{
+      return this.couponRepository.find();
+    }
 }

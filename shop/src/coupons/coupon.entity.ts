@@ -6,9 +6,6 @@ export class Coupon {
     id: Long;
 
     @Column('text')
-    code: string
-
-    @Column('text')
     discount_type: string
 
     @Column('text')
