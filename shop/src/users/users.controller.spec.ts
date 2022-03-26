@@ -8,7 +8,6 @@ import { CreateUserDto } from 'src/dto/users/create-user.dto';
 describe('UsersController', () => {
   let userController: UsersController;
   let userService: UsersService;
-  let userRepository: UserRepository;
 
   const mockUserRepository = () => ({
     find: jest.fn(),
@@ -32,7 +31,6 @@ describe('UsersController', () => {
 
     userController = module.get<UsersController>(UsersController);
     userService = module.get<UsersService>(UsersService);
-    userRepository = module.get<UserRepository>(UserRepository);
   });
 
   it('should be defined', () => {

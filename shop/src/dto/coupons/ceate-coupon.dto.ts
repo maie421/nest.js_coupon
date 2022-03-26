@@ -1,4 +1,4 @@
-enum disCountType {
+export enum disCountType {
     Pixed = "PIXED",
     Percent = "PERCENT",
 
@@ -7,5 +7,5 @@ enum disCountType {
 export class CreateCouponDto{
     discount_type : disCountType
     discount_value: string
-    period_date: number    
+    period_date: number
 }
