@@ -1,4 +1,11 @@
-import { Column, CreateDateColumn, Entity, Long, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  Long,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from "typeorm";
 
 @Entity()
 export class User {
@@ -15,7 +22,7 @@ export class User {
   password: string;
 
   @Column({
-    type: 'simple-array',
+    type: "simple-array",
     nullable: true,
   })
   coupon_id!: number[] | null;
@@ -23,6 +30,6 @@ export class User {
   @CreateDateColumn({ name: "created_at" })
   created_at: Date;
 
-  @UpdateDateColumn({ name: "updated_at" }) 
+  @UpdateDateColumn({ name: "updated_at" })
   updated_at: Date;
 }

@@ -1,8 +1,8 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { UserRepository } from './users.repository';
-import { UsersService } from './users.service';
+import { Test, TestingModule } from "@nestjs/testing";
+import { UserRepository } from "./users.repository";
+import { UsersService } from "./users.service";
 
-describe('UsersService', () => {
+describe("UsersService", () => {
   let userService;
   let userRepository;
 
@@ -19,15 +19,14 @@ describe('UsersService', () => {
           provide: UserRepository,
           useFactory: mockUserRepository,
         },
-    ],
+      ],
     }).compile();
 
     userService = await module.get<UsersService>(UsersService);
-    userRepository = await module.get<UserRepository>(UserRepository)
-
+    userRepository = await module.get<UserRepository>(UserRepository);
   });
 
-  it('should be defined', () => {
+  it("should be defined", () => {
     expect(userService).toBeDefined();
   });
 });
