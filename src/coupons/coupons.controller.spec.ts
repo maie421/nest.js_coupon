@@ -3,7 +3,6 @@ import {
   CreateCouponDto,
   disCountType,
 } from "src/dto/coupons/ceate-coupon.dto";
-import { UsersController } from "src/users/users.controller";
 import { CouponRepository } from "./copons.repository";
 import { CouponsController } from "./coupons.controller";
 import { CouponsService } from "./coupons.service";
