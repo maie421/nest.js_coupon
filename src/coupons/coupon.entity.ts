@@ -1,7 +1,7 @@
 import {
   Column,
   CreateDateColumn,
-  Entity,
+  Entity, Index,
   Long,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -11,6 +11,10 @@ import {
 export class Coupon {
   @PrimaryGeneratedColumn()
   id: Long;
+
+  @Index()
+  @Column("int")
+  coupon_id: Long;
 
   @Column("text")
   discount_type: string;
