@@ -1,5 +1,5 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { CreateCouponDto } from 'src/dto/coupons/ceate-coupon.dto';
+import { CreateCouponDto } from 'src/coupons/ceate-coupon.dto';
 import { CouponRepository } from './copons.repository';
 import { Coupon } from './coupon.entity';
 

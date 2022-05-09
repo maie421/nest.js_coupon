@@ -2,7 +2,7 @@ import { Test, TestingModule } from "@nestjs/testing";
 import {
   CreateCouponDto,
   disCountType,
-} from "src/dto/coupons/ceate-coupon.dto";
+} from "src/coupons/ceate-coupon.dto";
 import { CouponRepository } from "./copons.repository";
 import { CouponsController } from "./coupons.controller";
 import { CouponsService } from "./coupons.service";

@@ -9,7 +9,7 @@ import {
   HttpException,
 } from "@nestjs/common";
 import { JwtAuthGuard } from "src/auth/jwt-auth.guard";
-import { CreateUserDto } from "src/dto/users/create-user.dto";
+import { CreateUserDto } from "src/users/create-user.dto";
 import { UsersService } from "./users.service";
 import { lsUserException, emailException } from "./users-exception";
 import * as bcrypt from "bcrypt";

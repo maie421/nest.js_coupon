@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Post } from "@nestjs/common";
-import { CreateCouponDto } from "src/dto/coupons/ceate-coupon.dto";
+import { CreateCouponDto } from "src/coupons/ceate-coupon.dto";
 import { Coupon } from "./coupon.entity";
 import { CouponsService } from "./coupons.service";
 

@@ -3,7 +3,7 @@ import { UsersController } from "./users.controller";
 import { UserRepository } from "./users.repository";
 import { UsersService } from "./users.service";
 import * as bcrypt from "bcrypt";
-import { CreateUserDto } from "src/dto/users/create-user.dto";
+import { CreateUserDto } from "src/users/create-user.dto";
 
 describe("UsersController", () => {
   let userController: UsersController;
